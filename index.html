@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,25 +31,49 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-    </div class="container">
+    
       
       <!-- seperating each time block into individual rows broken out by three columns-->
       <!-- 9AM -->
       <div class="row time-block">
-        <div class="col hour">9AM</div>
-        <div class="col-10 hour"></div>
-        <div class="col hour"></div>
+        <div class="col hour time">
+          <p class="9am">
+            9AM
+          </p>
+<!-- <span class="oi oi-lock-locked"> 
+            </span>  -->
+        </div>
+        <div class="col-10 hour">
+          <textarea class="text">
+
+          </textarea>
+        </div>
+        <div class="col hour">
+          <button class="saveBtn">
+            <span class="oi oi-lock-locked"></span>
+          </button>
+        </div>
       </div>
       <!-- 10AM -->
       <div class="row time-block">
-        <div class="col hour">10AM</div>
-        <div class="col-10 hour"></div>
-        <div class="col hour"></div>
+        <div class="col hour time">10AM</div>
+        <div class="col-10 hour">
+          <textarea>
+
+          </textarea>
+        </div>
+        <div class="col hour">
+          <button class="saveBtn">
+            <span class="oi oi-lock-locked"></span>
+          </button>
+        </div>
       </div>
       <!-- 11AM -->
       <div class="row time-block">
         <div class="col hour">11AM</div>
-        <div class="col-10 hour"></div>
+        <div class="col-10 hour">
+          
+        </div>
         <div class="col hour"></div>
       </div>
       <!-- 12AM -->
@@ -96,3 +121,8 @@
 
   </body>
 </html>
+
+
+
+ <!-- <i class="fas fa-save"> 
+            </i></button> "will use this if other library becomes an issue-->
