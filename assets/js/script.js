@@ -2,7 +2,112 @@
 
 var rightNow = moment().format("dddd MMMM Do");
 $("#currentDay").append(rightNow);
-//console.log(rightNow);
+console.log(rightNow);
+
+
+
+// Adding functionality to change background color based on the difference between current time and printed time on the scheduler.  For example, if the current hour is more than hour past the posted time, then the background will be gray; present = red; future = green.  Exact colors can be found in style.css.
+
+// create variables that align with military time.  Example, 1pm = 13 (var fifthHour).
+
+var firstHour = 9;
+var secondHour = 10;
+var thirdHour = 11;
+var fourthHour = 12;
+var fifthHour = 13;
+var sixthHour = 14;
+var seventhHour = 15;
+var eigthHour = 16;
+var ninthHour = 17;
+
+var currentHour = moment().format("H");
+// console.log(currentHour);
+
+// Utilizing an if else statement for each time block.  
+
+// 9am 
+if(currentHour < firstHour) {
+  $(".text9").addClass("future");
+} else if(currentHour > firstHour) {
+  $(".text9").addClass("past");
+} else if(currentHour = firstHour) {
+  $(".text9").addClass("present");
+}
+
+// 10am 
+if(currentHour < secondHour) {
+  $(".text10").addClass("future");
+} else if(currentHour > secondHour) {
+  $(".text10").addClass("past");
+} else if(currentHour = secondHour) {
+  $(".text10").addClass("present");
+}
+
+// 11am 
+if(currentHour < thirdHour) {
+  $(".text11").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text11").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text11").addClass("present");
+}
+
+// 12pm 
+if(currentHour < thirdHour) {
+  $(".text12").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text12").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text12").addClass("present");
+}
+
+// 1pm 
+if(currentHour < thirdHour) {
+  $(".text13").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text13").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text13").addClass("present");
+}
+
+// 2pm 
+if(currentHour < thirdHour) {
+  $(".text14").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text14").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text14").addClass("present");
+}
+
+// 3pm 
+if(currentHour < thirdHour) {
+  $(".text15").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text15").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text15").addClass("present");
+}
+
+// 4pm
+if(currentHour < thirdHour) {
+  $(".text16").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text16").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text16").addClass("present");
+}
+
+// 5pm 
+if(currentHour < thirdHour) {
+  $(".text17").addClass("future");
+} else if(currentHour > thirdHour) {
+  $(".text17").addClass("past");
+} else if(currentHour = thirdHour) {
+  $(".text17").addClass("present");
+}
+
+
+
 
 
 
