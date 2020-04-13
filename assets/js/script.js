@@ -113,7 +113,7 @@ if(currentHour < ninthHour) {
 
 // setting tasks to local storage
 // giving each row an array for the tasks 
-
+var tasksRow9 = [];
 var tasksRow10 = [];
 var tasksRow11 = [];
 var tasksRow12 = [];
