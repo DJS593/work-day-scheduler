@@ -111,108 +111,116 @@ if(currentHour < thirdHour) {
 
 
 
-// Need to add tasks 
+// setting tasks to local storage
+// giving each row an array for the tasks 
 
+var taskCount = 0
+var tasks = []
+// do i need var tasks?
+var tasksRow9 = [];
+var tasksRow10 = [];
+var tasksRow11 = [];
+var tasksRow12 = [];
+var tasksRow13 = [];
+var tasksRow14 = [];
+var tasksRow15 = [];
+var tasksRow16 = [];
+var tasksRow17 = [];
 
+// 9am
+$("#row9").on("click", "#btn9", function(event) {
+  event.preventDefault();
+  var tasks9 = $("#text9").val().trim();
+  tasksRow9.push(tasks9);
+  localStorage.setItem("9am", JSON.stringify(tasksRow9));
+});
 
-// adding an event listener / delegating the click to the div with a class of .time-block for now, but considering moving to div class = "container."  I could also just isolate each click.
+// 10am
+$("#row10").on("click", "#btn10", function(event) {
+  event.preventDefault();
+  var tasks10 = $("#text10").val().trim();
+  tasksRow10.push(tasks10);
+  localStorage.setItem("10am", JSON.stringify(tasksRow10));
+});
 
-//$(".time-block").on("click", "button",  function () {
-//   console.log("button");
-//   });
+// 11am
+$("#row11").on("click", "#btn11", function(event) {
+  event.preventDefault();
+  var tasks11 = $("#text11").val().trim();
+  tasksRow11.push(tasks11);
+  localStorage.setItem("11am", JSON.stringify(tasksRow11));
+});
 
-// $(".time-block").on("click", "textarea", function() {
-  
-//   var text = $(this)
-//     .text()
-//     .trim();
-//   console.log(text);
+// 12pm
+$("#row12").on("click", "#btn12", function(event) {
+  event.preventDefault();
+  var tasks12 = $("#text12").val().trim();
+  tasksRow12.push(tasks12);
+  localStorage.setItem("12pm", JSON.stringify(tasksRow12));
+});
 
-//   var textInput = $("<textarea>")
-//     .addClass("text")
-//     .val(text);
-//   console.log(textInput);
-// });
+// 1pm
+$("#row13").on("click", "#btn13", function(event) {
+  event.preventDefault();
+  var tasks13 = $("#text13").val().trim();
+  tasksRow13.push(tasks13);
+  localStorage.setItem("1pm", JSON.stringify(tasksRow13));
+});
 
+// 2pm
+$("#row14").on("click", "#btn14", function(event) {
+  event.preventDefault();
+  var tasks14 = $("#text14").val().trim();
+  tasksRow14.push(tasks14);
+  localStorage.setItem("2pm", JSON.stringify(tasksRow14));
+});
 
-// // consider isolating each button for saving purposes
+// 3pm
+$("#row15").on("click", "#btn15", function(event) {
+  event.preventDefault();
+  var tasks15 = $("#text15").val().trim();
+  tasksRow15.push(tasks15);
+  localStorage.setItem("3pm", JSON.stringify(tasksRow15));
+});
 
-// $(".saveBtn").on("click", function () {
-//   console.log(this);
-// });
+// 4pm
+$("#row16").on("click", "#btn16", function(event) {
+  event.preventDefault();
+  var tasks16 = $("#text16").val().trim();
+  tasksRow16.push(tasks16);
+  localStorage.setItem("4pm", JSON.stringify(tasksRow16));
+});
 
-// var text = $(".text").textContent;
-// console.log(text);
-
-
-
-
-// PRACTIC AREA
-
-
-// function clear_all() {
-//   $('#key').val('');
-//   $('#value').val('');
-// }
-
-//Store Data
-
-tasks = []
-
-saveTasks = 
-
-$(".text-one").on("click", "textarea", function() { 
-  var text = $(this).text().trim();
-  
-  var textInput = $("<textarea>")
-    .addClass("text")
-    .val(text);
-
-  $(this).replaceWith(textInput);
-
-  textInput.trigger("focus");
-
-  saveTasks
+// 5pm
+$("#row17").on("click", "#btn17", function(event) {
+  event.preventDefault();
+  var tasks17 = $("#text17").val().trim();
+  tasksRow17.push(tasks17);
+  localStorage.setItem("5pm", JSON.stringify(tasksRow17));
 });
 
 
+// add getItem from local storage for each row
 
+$("#text9").val(JSON.parse(localStorage.getItem("9am")));
+$("#text10").val(JSON.parse(localStorage.getItem("10am")));
+$("#text11").val(JSON.parse(localStorage.getItem("11am")));
+$("#text12").val(JSON.parse(localStorage.getItem("12pm")));
+$("#text13").val(JSON.parse(localStorage.getItem("1pm")));
+$("#text14").val(JSON.parse(localStorage.getItem("2pm")));
+$("#text15").val(JSON.parse(localStorage.getItem("3pm")));
+$("#text16").val(JSON.parse(localStorage.getItem("4pm")));
+$("#text17").val(JSON.parse(localStorage.getItem("5pm")));
 
 
 
 
 
 
-// $("#btn1").click(function() {
 
-//   //Var Key and Value
-//   var the_key = "test";
-//   var the_value = $('#text1').val();
 
-//   //Check if Key or Value is empty
-//   if ($.trim(the_value) == '') {
-//     $('.notice').text('Please enter a VALUE');
-//   }
 
-//   //If not empty then store data
-//   else {
-//     localStorage.setItem(the_key, JSON.stringify(the_value));
-//     // clear_all();
-//     // $('.notice').html(
-//     //   "Data saved. <br /> You can now retrieve it with: $.jStorage.get('" + the_key + "') <br />" +
-//     //   "where <strong>" + the_key + "</strong> is the <u>KEY</u> you defined, and <strong>" + the_value + "</strong> is the <u>VALUE</u> you defined." +
-//     //   "<br /> <br /><strong>Example: $.jStorage.get('" + the_key + "')" +
-//     //   " » Returns: " + localStorage.getItem(the_key) + "</strong><br /> <br />You can check the value in the Developer Tools of your browser on: Resources -> Local Storage -> https://s.codepen.io -> jStorage"
-//     // );
-//   }
-// });
 
-// //Clear Data
-// $("#clear").click(function() {
-//   $.jStorage.flush();
-//   clear_all();
-//   $('.notice').text('Data cleared');
-// });
 
 
 
@@ -227,53 +235,23 @@ $(".text-one").on("click", "textarea", function() {
 
 
 
-// var tasks = [];
 
-// var task1 = document.querySelector('.text');
 
-//var task1 = $(".t1").val();
-//console.log(task1);
 
-// var taskInput = $(".text");
-// tasks.push(taskInput)
-//   .text()
-//   .trim();
 
-// console.log(tasks);
 
-//localStorage.setItem('tasks', JSON.stringify(tasks));
 
 
-//vals = JSON.parse(localStorage.getItem('tasks'));
 
 
 
 
-{/* <div class="content-output"></div>
-<textarea class="content-input" placeholder="Your text here"></textarea>
-<button class="save-button">Save</button> */}
 
-// var input_textarea = document.querySelector('.text');
-// var output_div = document.querySelector('.textDiv');
-// var save_button = document.querySelector('.saveBtn');
 
-// save_button.addEventListener('click', updateOutput);
-// console.log("click");
 
-// function updateOutput() {
-// 	localStorage.setItem('content', input_textarea.value);
-// }
 
 
 
-// output_div.textContent = localStorage.getItem('content');
-// input_textarea.value = localStorage.getItem('content');
-// console.log('content');
-// function updateOutput() {
-// 	localStorage.setItem('content', input_textarea.value);
-	
-// 	output_div.textContent = input_textarea.value;
-// }
 
 
 
@@ -283,81 +261,6 @@ $(".text-one").on("click", "textarea", function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Use saveTasks to save tasks to local storate.  Need to define tasks as the text in the <textarea>.
-
-// var tasks = $(".text").text;
-// console.log(tasks);
-
-// var saveTasks = function() {
-//   localStorage.setItem("tasks", JSON.stringify(tasks));
-// };
-
-
-
-
-
-// var currentHour = moment().format("h:mm");
-// console.log(currentHour);
-
-
-// logic to indicate if an time-block is in the past, present or future
-// past will be gray b-g, present is red and future is green
-
-
-// I want to pull in the time on the left of the schedule (e.g. 9AM) and compare to current time to determine background shading
-// m = moment('9AM', 'dddd');
-// console.log(m);
-
-//var time = ;
-//console.log(time);
-
-// I will need to use moment().isAfter(time) FYI - time is a defined variable for a set time.  I need to figure out how to take the time
-
-// var startTime = moment("9:00 am", "HH:mm a");
-// // var currentTime = moment("12:31 pm", "HH:mm a");
-// var currentTime = moment().format("HH:mm a");
-// var diffTime = moment(currentTime, "HH:mm a");
-// console.log(diffTime);
-
-// // calculate total duration
-// var duration = moment.duration(diffTime.diff(startTime));
-// console.log(duration);
-// if (duration >= 0) {
-//   var present = "true"
-// } else {
-//   var present = "not true";
-// }
-// console.log(present);
-
-
-// duration in hours
-//var hours = parseInt(duration.asHours());
-
-// duration in minutes
-
-//console.log(hours);
-//var minutes = parseInt(duration.asMinutes())%60;
-//alert (hours + ' hour and '+ minutes+' minutes.');
 
 
 
