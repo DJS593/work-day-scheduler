@@ -2,7 +2,7 @@
 
 var rightNow = moment().format("dddd MMMM Do");
 $("#currentDay").append(rightNow);
-// console.log(rightNow);
+//console.log(rightNow);
 
 
 
@@ -12,14 +12,62 @@ $("#currentDay").append(rightNow);
 
 // adding an event listener / delegating the click to the div with a class of .time-block for now, but considering moving to div class = "container."  I could also just isolate each click.
 
-// $(".time-block").on("click", "button", function () {
+//$(".time-block").on("click", "button",  function () {
+//   console.log("button");
+//   });
+
+// $(".time-block").on("click", "textarea", function() {
+  
+//   var text = $(this)
+//     .text()
+//     .trim();
+//   console.log(text);
+
+//   var textInput = $("<textarea>")
+//     .addClass("text")
+//     .val(text);
+//   console.log(textInput);
+// });
+
+
+// // consider isolating each button for saving purposes
+
+// $(".saveBtn").on("click", function () {
 //   console.log(this);
 // });
 
-// consider isolating each button for saving purposes
+// var text = $(".text").textContent;
+// console.log(text);
 
-$(".saveBtn").on("click", function () {
-  console.log(this);
+
+
+
+// PRACTIC AREA
+
+
+// function clear_all() {
+//   $('#key').val('');
+//   $('#value').val('');
+// }
+
+//Store Data
+
+tasks = []
+
+saveTasks = 
+
+$(".text-one").on("click", "textarea", function() { 
+  var text = $(this).text().trim();
+  
+  var textInput = $("<textarea>")
+    .addClass("text")
+    .val(text);
+
+  $(this).replaceWith(textInput);
+
+  textInput.trigger("focus");
+
+  saveTasks
 });
 
 
@@ -30,8 +78,141 @@ $(".saveBtn").on("click", function () {
 
 
 
-var currentHour = moment().format("h:mm");
-console.log(currentHour);
+// $("#btn1").click(function() {
+
+//   //Var Key and Value
+//   var the_key = "test";
+//   var the_value = $('#text1').val();
+
+//   //Check if Key or Value is empty
+//   if ($.trim(the_value) == '') {
+//     $('.notice').text('Please enter a VALUE');
+//   }
+
+//   //If not empty then store data
+//   else {
+//     localStorage.setItem(the_key, JSON.stringify(the_value));
+//     // clear_all();
+//     // $('.notice').html(
+//     //   "Data saved. <br /> You can now retrieve it with: $.jStorage.get('" + the_key + "') <br />" +
+//     //   "where <strong>" + the_key + "</strong> is the <u>KEY</u> you defined, and <strong>" + the_value + "</strong> is the <u>VALUE</u> you defined." +
+//     //   "<br /> <br /><strong>Example: $.jStorage.get('" + the_key + "')" +
+//     //   " » Returns: " + localStorage.getItem(the_key) + "</strong><br /> <br />You can check the value in the Developer Tools of your browser on: Resources -> Local Storage -> https://s.codepen.io -> jStorage"
+//     // );
+//   }
+// });
+
+// //Clear Data
+// $("#clear").click(function() {
+//   $.jStorage.flush();
+//   clear_all();
+//   $('.notice').text('Data cleared');
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var tasks = [];
+
+// var task1 = document.querySelector('.text');
+
+//var task1 = $(".t1").val();
+//console.log(task1);
+
+// var taskInput = $(".text");
+// tasks.push(taskInput)
+//   .text()
+//   .trim();
+
+// console.log(tasks);
+
+//localStorage.setItem('tasks', JSON.stringify(tasks));
+
+
+//vals = JSON.parse(localStorage.getItem('tasks'));
+
+
+
+
+{/* <div class="content-output"></div>
+<textarea class="content-input" placeholder="Your text here"></textarea>
+<button class="save-button">Save</button> */}
+
+// var input_textarea = document.querySelector('.text');
+// var output_div = document.querySelector('.textDiv');
+// var save_button = document.querySelector('.saveBtn');
+
+// save_button.addEventListener('click', updateOutput);
+// console.log("click");
+
+// function updateOutput() {
+// 	localStorage.setItem('content', input_textarea.value);
+// }
+
+
+
+// output_div.textContent = localStorage.getItem('content');
+// input_textarea.value = localStorage.getItem('content');
+// console.log('content');
+// function updateOutput() {
+// 	localStorage.setItem('content', input_textarea.value);
+	
+// 	output_div.textContent = input_textarea.value;
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Use saveTasks to save tasks to local storate.  Need to define tasks as the text in the <textarea>.
+
+// var tasks = $(".text").text;
+// console.log(tasks);
+
+// var saveTasks = function() {
+//   localStorage.setItem("tasks", JSON.stringify(tasks));
+// };
+
+
+
+
+
+// var currentHour = moment().format("h:mm");
+// console.log(currentHour);
 
 
 // logic to indicate if an time-block is in the past, present or future
@@ -39,40 +220,40 @@ console.log(currentHour);
 
 
 // I want to pull in the time on the left of the schedule (e.g. 9AM) and compare to current time to determine background shading
-m = moment('9AM', 'dddd');
-console.log(m);
+// m = moment('9AM', 'dddd');
+// console.log(m);
 
 //var time = ;
 //console.log(time);
 
 // I will need to use moment().isAfter(time) FYI - time is a defined variable for a set time.  I need to figure out how to take the time
 
-var startTime = moment("9:00 am", "HH:mm a");
-// var currentTime = moment("12:31 pm", "HH:mm a");
-var currentTime = moment().format("HH:mm a");
-var diffTime = moment(currentTime, "HH:mm a");
-console.log(diffTime);
+// var startTime = moment("9:00 am", "HH:mm a");
+// // var currentTime = moment("12:31 pm", "HH:mm a");
+// var currentTime = moment().format("HH:mm a");
+// var diffTime = moment(currentTime, "HH:mm a");
+// console.log(diffTime);
 
-// calculate total duration
-var duration = moment.duration(diffTime.diff(startTime));
-console.log(duration);
-if (duration >= 0) {
-  var present = "true"
-} else {
-  var present = "not true";
-}
-console.log(present);
+// // calculate total duration
+// var duration = moment.duration(diffTime.diff(startTime));
+// console.log(duration);
+// if (duration >= 0) {
+//   var present = "true"
+// } else {
+//   var present = "not true";
+// }
+// console.log(present);
 
 
 // duration in hours
 //var hours = parseInt(duration.asHours());
 
 // duration in minutes
-//var minutes = parseInt(duration.asMinutes())%60;
 
 //console.log(hours);
+//var minutes = parseInt(duration.asMinutes())%60;
 //alert (hours + ' hour and '+ minutes+' minutes.');
 
-var auditTask = function(taskEl) {
-  console.log(taskEl);
-};
+
+
+

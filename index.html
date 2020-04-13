@@ -31,29 +31,36 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-    
-      
-      <!-- seperating each time block into individual rows broken out by three columns-->
-      <!-- 9AM -->
-      <div class="row time-block">
+      <!-- seperating each hour into a row with three columns utilzing bootstrap -->
+      <!-- row 9am -->
+      <div id="row-9am" class="row">
+        
         <div class="col hour time">
+          
           <p class="9am">
             9AM
           </p>
+        
         </div>
-        <div class="col-10 hour">
-          <textarea class="text">
-
-          </textarea>
+        
+        <div class="col-10 hour text-one">
+          
+          <input class="form-control" type="text" id="text1" placeholder="test 1" />
+        
         </div>
+        
         <div class="col hour">
-          <button class="saveBtn">
+          
+          <button id="btn1" class="saveBtn">
             <span class="oi oi-lock-locked"></span>
           </button>
+        
         </div>
       </div>
-      <!-- 10AM -->
-      <div class="row time-block">
+      
+    
+      <!-- row 10am -->
+      <!-- <div class="row time-block">
         <div class="col hour time">10AM</div>
         <div class="col-10 hour">
           <textarea>
@@ -65,9 +72,9 @@
             <span class="oi oi-lock-locked"></span>
           </button>
         </div>
-      </div>
-      <!-- 11AM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 11am -->
+      <!-- <div class="row time-block">
         <div class="col hour">11AM</div>
         <div class="col-10 hour">
           <textarea class="future">
@@ -76,54 +83,60 @@
           
         </div>
         <div class="col hour"></div>
-      </div>
-      <!-- 12AM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 12am -->
+      <!-- <div class="row time-block">
         <div class="col hour">12PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
-      <!-- 1PM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 1pm -->
+      <!-- <div class="row time-block">
         <div class="col hour">1PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
-      <!-- 2PM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 2pm -->
+      <!-- <div class="row time-block">
         <div class="col hour">2PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
-      <!-- 3PM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 3pm -->
+      <!-- <div class="row time-block">
         <div class="col hour">3PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
-      <!-- 4PM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 4pm -->
+      <!-- <div class="row time-block">
         <div class="col hour">4PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
-      <!-- 5PM -->
-      <div class="row time-block">
+      </div> -->
+      <!-- row 5pm -->
+      <!-- <div class="row time-block">
         <div class="col hour">5PM</div>
         <div class="col-10 hour"></div>
         <div class="col hour"></div>
-      </div>
+      </div> --> 
+
+    
     
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- The starter code had a few paths, but I have added all the paths used in the assignment as just in case I decide to utilize one of the libraries. -->    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
   </body>
-</html>
+</html>  
 
 
-
- <!-- <i class="fas fa-save"> 
-            </i></button> "will use this if other library becomes an issue-->
+    <!-- extra info -->
+    <!-- A lock icon can be appended using the following: <i class="fas fa-save"> </i></button>.  This is a back-up if bootstrap does not work. -->
