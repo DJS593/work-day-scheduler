@@ -13,15 +13,15 @@ console.log(rightNow);
 var firstHour = 9;
 var secondHour = 10;
 var thirdHour = 11;
-var fourthHour = 22;
-var fifthHour = 23;
-var sixthHour = 23;
-var seventhHour = 23;
-var eigthHour = 23;
-var ninthHour = 23;
+var fourthHour = 12;
+var fifthHour = 13;
+var sixthHour = 14;
+var seventhHour = 15;
+var eigthHour = 16;
+var ninthHour = 17;
 
 var currentHour = moment().format("H");
-console.log(currentHour);
+// console.log(currentHour);
 
 // Utilizing an if else statement for each time block.  
 
@@ -114,10 +114,6 @@ if(currentHour < ninthHour) {
 // setting tasks to local storage
 // giving each row an array for the tasks 
 
-var taskCount = 0
-var tasks = []
-// do i need var tasks?
-var tasksRow9 = [];
 var tasksRow10 = [];
 var tasksRow11 = [];
 var tasksRow12 = [];

@@ -12,7 +12,7 @@ textarea {
   border-left: 1px solid black;
   padding: 10px;
   text-align: left;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
   /* height: 100%;*/
 }
@@ -24,6 +24,8 @@ textarea {
   border-radius: 0;
   border-bottom: 10px solid black;
 }
+
+/* removing the bootstrap setting for padding for both .col and .col-10 */
 
 .col {
   margin: 0;
@@ -68,7 +70,7 @@ textarea {
   width: 100%;
 }
 
-
+/* class .past, .present and .future originally had color: white, which I changed to color: black */
 
 .past {
   background-color: #d3d3d3;
